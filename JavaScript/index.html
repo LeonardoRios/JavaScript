@@ -9,13 +9,19 @@
 
     <body>
 
+        <!-- 
+            A tag script pode ser inserido tanto dentro do HEAD, como no início ou no fim do body, mas é interessante
+            que seja inserida no fim, porque os componentes da página são carregados de forma sequencial(de cima para baixo), então
+            se colocar os scripts no final do body, todo o conteúdo html da página já terá sido carregado evitando problemas
+        -->
+
         <script>
 
-            //tipos de váriaveis
-
             /* 
+                TIPOS DE VARIÁVEIS
                 Não existe tipagem em JavaScript.
-                Tudo será declarado como var e dependendo da atribuição que definirá o tipo de valor da variável
+                Tudo será declarado como var e dependendo da atribuição que definirá o tipo de valor da variável.
+                Não deve criar variável com acento ou com espaços entre o nome da variável (Ex: soma Teste = 1;)
             */
 
             // string
@@ -33,13 +39,75 @@
             // array
             var nomes = ["Leonardo", "Mateus", "de Sá", "Ramos", "Rios"];
 
-            // objeto
+            // objeto   
             var pessoa = {
                 nome: "Leonardo",
                 idade: 25,
                 peso: 80.5,
                 humano: true
             };
+
+
+            function exemplosMatematicos(){
+
+                // soma
+                var numero1 = 4;
+                var numero2 = 6;
+                console.log(numero1 + numero2);
+
+                // divisão
+                var numero3 = 12;
+                var numero4 = 6;
+                console.log(numero3 / numero4);
+
+                // subtração
+                var numero5 = 13;
+                var numero6 = 6;
+                console.log(numero5 - numero6);
+
+                // multiplicação
+                var numero7 = 2;
+                var numero8 = 16;
+                console.log(numero7 * numero8);
+
+                // restante da divisão
+                var numero9 = 10;
+                var numero10 = 5;
+                var restanteDaDivisao = numero9 % numero10;
+                console.log(restanteDaDivisao);
+
+                // soma mais um ao valor
+                var valor = 1;
+                valor++;
+                console.log(valor);
+
+                var primeraSoma = 1;
+                var segundaSoma = 1;
+
+                // nesta situação é impresso o valor 1 e depois que é feita a soma a variável segundaSoma
+                console.log(segundaSoma++);
+
+                // nesta situação a soma é feita primeiro e depois é impresso o valor que já será igual a 2
+                console.log(++primeraSoma);
+
+
+
+
+                // subtrai mais um ao valor
+                var valor = 5;
+                valor--;
+                console.log(valor);
+
+                var primeroSubtracao = 5;
+                var segundoSubtracao = 8;
+
+                // nesta situação é impresso o valor 8 e depois que é feita a subtração a variável segundoSubtracao
+                console.log(segundoSubtracao--);
+
+                // nesta situação a subtração é feita primeiro e depois é impresso o valor que já será igual a 4
+                console.log(--primeroSubtracao);
+
+            }
 
         </script>
 
